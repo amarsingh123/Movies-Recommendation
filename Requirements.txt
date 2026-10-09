@@ -1,0 +1,15 @@
+# ---------- Backend (main.py) ----------
+fastapi
+uvicorn[standard]
+httpx
+python-dotenv
+pydantic
+pandas
+numpy
+scipy
+scikit-learn
+
+
+# ---------- Frontend (app.py) ----------
+streamlit
+requests
