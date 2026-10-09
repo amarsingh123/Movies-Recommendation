@@ -7,7 +7,10 @@ import streamlit as st
 # =========================
 st.set_page_config(page_title="ReelDeal", page_icon="🎬", layout="wide")
 
-DEFAULT_API = os.getenv("API_BASE", "http://127.0.0.1:8001")
+DEFAULT_API = os.getenv("API_BASE", "https://movies-recommendation-qqiy.onrender.com/")
+#DEFAULT_API = os.getenv("API_BASE", "http://127.0.0.1:8001")
+
+
 TMDB_IMG = "https://image.tmdb.org/t/p/w500"
 PLACEHOLDER = "https://placehold.co/500x750/1f2433/8b93a7?text=No+Poster"
 
