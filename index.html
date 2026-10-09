@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CineMatch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="rail">
+  <h1>CineMatch</h1>
+  <form id="searchForm">
+    <input id="q" type="search" placeholder="Search a movie" aria-label="Search a movie">
+    <button>Search</button>
+  </form>
+  <nav id="menu" aria-label="Categories"></nav>
+  <label class="api">API address<input id="api"></label>
+</aside>
+
+<main>
+  <header class="bar">
+    <h2 id="title">Trending</h2>
+    <form id="filters" class="filters">
+      <label>Min rating<select id="fRating"><option value="0">Any</option><option value="5">5+</option><option value="6">6+</option><option value="7">7+</option><option value="8">8+</option></select></label>
+      <label>From year<input id="fFrom" type="number" min="1900" max="2100" placeholder="1980"></label>
+      <label>To year<input id="fTo" type="number" min="1900" max="2100" placeholder="2026"></label>
+      <label>Title contains<input id="fText" type="search" placeholder="e.g. war"></label>
+      <label>Sort<select id="fSort"><option value="">API order</option><option value="rating">Highest rated</option><option value="new">Newest</option><option value="old">Oldest</option><option value="az">Title A–Z</option></select></label>
+      <label class="chk"><input id="fPoster" type="checkbox"> Posters only</label>
+      <button type="reset">Reset</button>
+    </form>
+  </header>
+  <p id="status" role="status"></p>
+  <section id="grid" class="grid"></section>
+</main>
+
+<aside id="drawer" class="drawer" aria-hidden="true" aria-label="Movie details">
+  <button id="dClose" class="close" aria-label="Close details">×</button>
+  <div id="dBody"></div>
+</aside>
+<script src="script.js"></script>
+</body>
+</html>
